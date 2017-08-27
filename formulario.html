@@ -1,0 +1,299 @@
+   <!-- FORMULARIO 1 ////////////////////////// -->
+
+   <div id="formcv">
+      <form onsubmit="submitForm(); return false;" id="my_form">
+      <label class="namefull">Nombre Completo:</label>
+      <input type="text" id="n" required maxlength="200"><br>
+     
+    
+      <div class="forminside2">
+        <div id="forminside1">
+           <label>Correo Electrónico:</label>
+           <input type="email" id="e"  required maxlength="200"><br>
+        </div>
+        <div id="forminside11">
+           <label>Número de teléfono:</label>
+           <input type="tel" id="tel" required maxlength="15" pattern="[0-9]{1,15}"><br>
+        </div>
+      </div>
+
+      <div class="clear1"></div>
+    
+       <label class="puestopos">Puesto al que postula:</label>
+         <select name="postulanteop" id="pos" required>
+          <option value="" selected="selected"></option>
+          <option VALUE="Analista de Control de Calidad Asociado">Analista de Control de Calidad Asociado</option>
+          <option VALUE="Analista de Control de Calidad Regular">Analista de Control de Calidad Regular</option>
+          <option VALUE="Analista de Control de Calidad Senior">Analista de Control de Calidad Senior</option>
+          <option VALUE="Ingeniero de automatización de Pruebas de Software">Ingeniero de automatización de Pruebas de Software</option>
+          <option VALUE="Líder de equipo de Control de Calidad de Software">Líder de equipo de Control de Calidad de Software</option>
+          <option VALUE="Ingeniero de Software">Ingeniero de Software</option>
+          <option VALUE="Analista Funcional de Negocios">Analista Funcional de Negocios</option>
+          <option VALUE="Gestor de Tareas">Gestor de Tareas</option>
+          <option VALUE="Jefe de Proyectos">Jefe de Proyectos</option>
+          <option VALUE="Arquitecto de Software">Arquitecto de Software</option>
+         </select>
+
+      <div class="clear1"></div>
+      <label class="descrip">Descripción Breve:</label>
+      <textarea id="m" required maxlength="200"></textarea><br>
+      <label class="addcv">Adjunta tu CV:</label>
+
+      <input type="file" id="att" required><br>
+      <input type="submit" id="mybtn" value="ENVIAR"><span id="status"></span>
+    </form>
+    <br><br>
+    
+    </div>
+
+    <!-- FIN DE FORMULARIO 1 //////////////////////////// -->
+
+  <style type="text/css">
+      
+   form label{
+  text-align: left;
+    color: #000000;
+    line-height: 14px;
+    font-size: 14px;
+    font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+    font-weight: bold;
+    display: block;
+}
+
+     form input{
+      font-size: 14px;
+      width: 100%;
+      line-height: 25px;
+      background-color: transparent;
+      color: #000000;
+      border:solid 2px;
+    }
+     form textarea{
+      font-size: 14px;
+      width: 100%;
+      line-height: 25px;
+      background-color: transparent;
+      color: #000000;
+      border:solid 2px;
+    }
+
+    form select{
+      font-size: 14px;
+      width: 100%;
+      line-height: 25px;
+      background-color: transparent;
+      color: #000000;
+      border:solid 2px;
+      float: left;
+    }
+
+    #formcv{
+     /* margin-top: 50px;
+      position: absolute;*/
+    }
+     form{
+       width: 100%;
+       /*margin-left: -100px;*/
+     }
+     form .forminside2{
+      /*width: 627px;*/
+      margin-top: 10px;
+      display: block;
+      
+    }
+      form #forminside1{
+      width: 49%;
+      display: inline-block;
+      float: left;
+       
+     }
+       form #forminside11{
+      width: 49%;
+      display: inline-block;
+      float: right;
+       
+     }
+      form #forminside1 input{
+      /*width: 300px;*/
+      float: left;
+     }
+
+     form #forminside1 label,form #forminside11 label{
+      margin-bottom: 10px;
+     }
+       form #forminside11 input{
+      /*width: 300px;*/
+      float: right;
+     }
+      form #forminside11 label{
+      /*margin-left: 10px;*/
+     }
+
+      form input[type=submit]{
+      width: 130px;
+      float: right;
+      line-height: 30px;
+      margin-top: 30px;
+      color: skyblue;
+      background-color: #000000;
+      border:0;
+      border-radius: 1em;
+      font-weight: normal;
+     }
+     form input[type=file]{
+        border:0;
+      }
+      form label span{
+      color: red;
+      font-weight: bold;
+     }
+      form label.puestopos{
+      padding-top: 10px;
+      display: block;
+      margin-bottom: 10px;
+     }
+
+     form label.descrip{
+       margin-top: 10px;
+       margin-bottom: 10px;
+     }
+       form .clear1{
+        clear: both;
+      }
+      span#success{
+        font-size: 20px;
+      }
+      span#status,span#status2{
+        font-size: 14px;
+      }
+
+			 img.imgracias1{
+        width: 250px;
+        /*margin-right: 8px;*/
+        margin-top: 60px;
+      }
+
+       img.imgracias2{
+        width: 250px;
+        /*margin-right: 25px;*/
+        margin-top: 40px;
+      }
+      
+      label.namefull{
+          margin-bottom: 10px;
+      }
+      label.namefull2{
+          margin-bottom: 10px;
+          margin-top: 10px;
+      }
+       label.addcv{
+          margin-top: 10px;
+       }
+      @media (max-width: 480px) {
+        form #forminside1,form #forminside11{
+          display: block;
+          width: 100%;
+        }
+        form #forminside11{
+          margin-top: 10px;
+        }
+
+      }
+
+      form input#mybtn2{
+        color: #FFE82B;
+      }
+      </style>
+
+       <script>
+      function _(id){ return document.getElementById(id); }
+      function submitForm(){
+        _("mybtn").disabled = true;
+        _("status").innerHTML = 'Enviando Mensaje...';
+        var formdata = new FormData();
+        formdata.append( "n", _("n").value );
+        formdata.append( "e", _("e").value );
+        formdata.append( "tel", _("tel").value );
+        formdata.append( "pos", _("pos").value );
+        formdata.append( "m", _("m").value );
+        formdata.append( "att", _("att").files[0] );
+       
+        var ajax = new XMLHttpRequest();
+        ajax.open( "POST", "sendmail.php" );
+        ajax.onreadystatechange = function() {
+          if(ajax.readyState == 4 && ajax.status == 200) {
+            if(ajax.responseText =="success1"){
+              _("my_form").innerHTML = '<img class="imgracias1" src="graciasf1.png">';
+            } else {
+              _("status").innerHTML = ajax.responseText;
+              _("mybtn").disabled = false;
+            }
+          }
+        }
+        ajax.send( formdata );
+      }
+        function submitForm2(){
+        _("mybtn2").disabled = true;
+        _("status2").innerHTML = 'Enviando Mensaje...';
+        var formdata = new FormData();
+        formdata.append( "n2", _("n2").value );
+        formdata.append( "e2", _("e2").value );
+        formdata.append( "tel2", _("tel2").value );
+       
+        formdata.append( "m2", _("m2").value );
+        formdata.append( "d2", _("d2").value );
+    
+       
+        var ajax = new XMLHttpRequest();
+        ajax.open( "POST", "sendmail2.php" );
+        ajax.onreadystatechange = function() {
+          if(ajax.readyState == 4 && ajax.status == 200) {
+            if(ajax.responseText =="success1"){
+              _("my_form2").innerHTML = '<img class="imgracias2" src="graciasf2.png">';
+            } else {
+              _("status2").innerHTML = ajax.responseText;
+              _("mybtn2").disabled = false;
+            }
+          }
+        }
+        ajax.send( formdata );
+      }
+</script>
+
+
+ <!-- FORMULARIO 2 //////////////////////////  -->
+
+ <div id="formcv2">
+      <form onsubmit="submitForm2(); return false;" id="my_form2">
+      <label class="namefull">Nombre de persona o empresa:</label>
+      <input type="text" id="n2" required maxlength="200"><br>
+     
+    
+      <div class="forminside2">
+      <div id="forminside1">
+         <label>Correo Electrónico:</label>
+         <input type="email" id="e2"  required maxlength="200"><br>
+     </div>
+     <div id="forminside11">
+         <label>Número de teléfono:</label>
+         <input type="tel" id="tel2"  required maxlength="15" pattern="[0-9]{1,15}"><br>
+      </div>
+      </div>
+
+      <div class="clear1"></div>
+
+       <label class="namefull2">Dirección:</label>
+      <input type="text"  id="d2"  required maxlength="200"><br>
+    
+      
+      <div class="clear1"></div>
+      <label class="descrip">Descripción Breve:</label>
+      <textarea id="m2" required maxlength="200"></textarea><br>
+
+      <input type="submit" id="mybtn2" value="ENVIAR"><span id="status2"></span>
+    </form>
+    <br><br>
+    
+    </div>
+
+    <!-- FIN DEL FORMULARIO 2 /////////////////// -->
